@@ -1,12 +1,13 @@
 <template>
   <div>
+    <MobileIcons />
     <BreadCrumb :breadCrumb="breadCrumb"/>
     <ProductDetail :product="product" />
     <div class="mt-8">
       <div class="card">
           <h2 style="padding: 10px">آگهی های مشابه</h2>
           <v-row>
-            <v-col cols="4">
+            <v-col md="4" sm="12">
               <AdvertiseCard :advertise="advertise"/>
             </v-col>
           </v-row>
@@ -21,7 +22,8 @@ export default {
   components: {
     ProductDetail: () => import("../components/ProductDetail.vue"),
     AdvertiseCard: () => import('../components/AdvertiseCard.vue'),
-    BreadCrumb: () => import('../components/BreadCrumb.vue')
+    BreadCrumb: () => import('../components/BreadCrumb.vue'),
+    MobileIcons: () => import('../components/MobileIcons.vue')
   },
   data() {
     return {

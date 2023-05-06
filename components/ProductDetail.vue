@@ -1,9 +1,9 @@
 <template>
   <div>
     <v-row>
-      <v-col cols="6">
+      <v-col sm="12" md="6">
         <h1>
-          <strong>{{ product?.name }}</strong>
+          <strong style="white-space: nowrap; font-size:25px">{{ product?.name }}</strong>
         </h1>
         <div class="d-flex justify-space-between">
           <div>
@@ -11,7 +11,7 @@
               `${product?.relativeTime} در ${product?.city?.stateName}-${product?.city?.name} | ${product?.categoryName}`
             }}</span>
           </div>
-          <div class="d-flex">
+          <div class="d-none d-md-flex">
             <div class="action-btn">
               <span>
                 4
@@ -65,7 +65,7 @@
           <v-divider />
         </div>
       </v-col>
-      <v-col cols="6">
+      <v-col sm="12" md="6">
         <v-window v-model="onboarding" show-arrows="hover">
           <v-window-item v-for="image in product.images" :key="image.fileId">
             <v-img :src="image?.fileUrl"></v-img>
@@ -119,7 +119,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .action-btn {
   margin-left: 8px;
   padding-left: 8px;

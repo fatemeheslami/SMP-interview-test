@@ -41,6 +41,6 @@ export default {
  .v-breadcrumbs li {
     color: #4A5F73;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
 }
 </style>
